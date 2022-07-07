@@ -1,0 +1,67 @@
+<header>
+    <div class="wrapper">
+        <div class="header-container">
+            <h1>Última Hora</h1>
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">NEWS</a></li>
+                    <li><a href="">CONTACTOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<body>
+    <main>
+
+        <div class="wrapper">
+        
+            <section class="contenedor-lista">
+                
+
+                    <ul [innerHtml]="resultado">
+
+                    </ul>
+                
+            </section>
+
+
+            <div class="form">
+                <div class="form-container">
+                    <h2>Ingresar Nueva noticia</h2>
+                    <label for="titulo">Ingresa el titulo de la noticia</label>
+                    <br>
+                    <input type="text" id="titulo" [(ngModel)]="titulo">
+                    <br>
+                    <label for="url">Ingresa el URL de la imagen</label>
+                    <br>
+                    <input type="text" id="url" [(ngModel)]="url">
+                    <br>
+                    <label for="contenido">Ingresa el contenido de la noticia</label>
+                    <br>
+                    <textarea name="" id="contenido" cols="30" rows="10" [(ngModel)]="texto"></textarea>
+                    <br>
+                    <label for="fecha">Ingresa la fecha</label>
+                    <br>
+                    <input type="date" [(ngModel)]="fecha">
+                    <br>
+                    <button (click)="guardarDatos()">Guardar</button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>Ultima Hora</p>
+        </div>
+    </footer>
+</body>
+<footer>
+    
+</footer>
