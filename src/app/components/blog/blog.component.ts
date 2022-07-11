@@ -37,19 +37,26 @@ export class BlogComponent implements OnInit {
   }
 
   guardarDatos(){
-    let newNoticia: Noticia = {
-      titulo: this.titulo,
-      url: this.url,
-      texto: this.texto,
-      fecha: this.fecha
+
+    if(this.titulo !== "" && this.url !== "" && this.texto !== "" && this.fecha !== ""){
+      let newNoticia: Noticia = {
+        titulo: this.titulo,
+        url: this.url,
+        texto: this.texto,
+        fecha: this.fecha
+      }
+  
+      this.arrNoticias.unshift(newNoticia);
+      this.cargarDatos();
+      this.titulo = "";
+      this.url = "";
+      this.texto = "";
+      this.fecha = "";
+    }else{
+      alert("Los campos no pueden estra vacios");
     }
 
-    this.arrNoticias.unshift(newNoticia);
-    this.cargarDatos();
-    this.titulo = "";
-    this.url = "";
-    this.texto = "";
-    this.fecha = "";
+    
   }
 
 }
